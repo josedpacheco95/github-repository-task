@@ -1,9 +1,12 @@
 const octokit = require('../../middlewares/gitRequest/index');
 
 
-exports.getRepositories = async (req, res, next) => {
+exports.getRepositorie = async (req, res, next) => {
     try {
-        const data = octokit.rest.repos.listPublic()
+        const data = await octokit.rest.repos.getRepositorie({
+            onwer: 'josedpacheco95',
+            repo: 'github-repository-task'
+        })
         return data;
     } catch(e) {
         next(e);
