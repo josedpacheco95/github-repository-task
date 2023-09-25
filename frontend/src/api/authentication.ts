@@ -6,6 +6,7 @@ export const login = async (body: AuthRequestForm) => {
         return response.data;
     } catch (e) {
         console.log(e)
+        return {error: true}
     }
 }
 
@@ -15,5 +16,6 @@ export const register = async (body: AuthRequestForm) => {
         return response.data;
     } catch (e) {
         console.log(e)
+        return {error: true, message: e}
     }
 }

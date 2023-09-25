@@ -126,7 +126,7 @@ or
 
 
 
-#Frontend
+## Frontend
 
 In the root of the repository, enter to the frontend folder
 
