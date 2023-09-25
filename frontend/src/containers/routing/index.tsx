@@ -8,6 +8,7 @@ import Login from '../../screens/Login';
 import Commits from '../../screens/Commits';
 import Register from '../../screens/Register';
 import RequiredAuth from '../../middleware/authentication';
+import { NavBar } from '../navBar';
 const router = createBrowserRouter([
     {
       path: "/",
@@ -19,7 +20,7 @@ const router = createBrowserRouter([
     },
     {
         path: '/commits' ,
-        element: <RequiredAuth><Commits /></RequiredAuth>
+        element: <RequiredAuth><NavBar><Commits /></NavBar></RequiredAuth>
     }
   ]);
 
