@@ -1,4 +1,4 @@
-import {useState, useEffect} from 'react'
+import {useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 import { login, register } from '../../api/authentication';
 
@@ -86,9 +86,9 @@ export const AuthenticationForm = ({ authenticationFormType = 'login' }) => {
                         {invalidPassword?? <p className='text-[red]'> Invalid password or email</p>}
                   </div>
                 
-                  <button onClick={() => handleSubmit() } className="w-full text-white  focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center bg-[blue] hover:bg-primary-700 focus:ring-primary-800">Sign {authenticationFormType == 'login'? 'Up' : 'In'}</button>
+                  <button onClick={() => handleSubmit() } className="w-full text-white  focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center bg-[blue] hover:bg-primary-700 focus:ring-primary-800">SIGN {authenticationFormType == 'register'? 'UP' : 'IN'}</button>
                   <p className="text-sm font-light text-gray-500 dark:text-gray-400">
-                     {authenticationFormType == 'login'? "Don't have an account yet?" : 'Already have an account' }<a onClick={() => navigate(authenticationFormType == 'login'? '/register': '/')} className="font-medium text-primary-600 hover:underline dark:text-primary-500">Sign {authenticationFormType == 'login'? 'Up' : 'In'}</a>
+                     {authenticationFormType == 'login'? "Don't have an account yet?" : 'Already have an account' }<a onClick={() => navigate(authenticationFormType == 'login'? '/register': '/')} className="font-medium text-primary-600 hover:underline dark:text-primary-500">Sign {authenticationFormType == 'register'? 'up' : 'in'}</a>
                   </p>
               </div>
           </div>
